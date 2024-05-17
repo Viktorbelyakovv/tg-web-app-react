@@ -16,14 +16,14 @@ const Form = () => {
             subject
         }
         tg.sendData(JSON.stringify(data))
-    })
+    }, [])
 
     useEffect(() => {
         tg.Telegram.WebApp.onEvent('mainButtonClicked', onSendData)
         return () => {
             tg.Telegram.WebApp.offEvent('mainButtonClicked', onSendData);
         }
-    }, [])
+    }, [onSendData])
 
     useEffect(() => {
         tg.MainButton.setParams({
