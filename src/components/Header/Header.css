@@ -1,11 +1,18 @@
 .header {
     width: 100%;
-    height: 50px;
+    height: auto;
     display: flex;
     align-items: center;
     padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .username {
     margin-left: auto;
+}
+
+.info {
+    border: 1px solid black;
 }
